@@ -31,11 +31,11 @@ const TRABAJOS = [
 const GALERIA = [
   { img: "g02", titulo: "Tarántula", detalle: "3D · Blender", enlace: "virtual_tut/p/CtmVUJGrNGp/" },
   { img: "g10", titulo: "Dron", detalle: "VFX · Blender y After Effects", enlace: "virtual_tut/reel/CKpwW-QpH4e/" },
-  { img: "g07", titulo: "Araña", detalle: "Fotografía · Sony ZV-E10", enlace: "virtual_tut/p/DJqMIeVsfja/" },
+  { img: "g07", titulo: "Araña", detalle: "Fotografía", enlace: "virtual_tut/p/DJqMIeVsfja/" },
   { img: "g04", titulo: "Helado", detalle: "3D de producto · Blender Cycles", enlace: "virtual_tut/p/DA91B1FubeR/" },
   { img: "g11", titulo: "K-pop", detalle: "Fotografía de evento", enlace: "virtual_tut/p/DISI53GS1Dc/" },
   { img: "g03", titulo: "Perfume", detalle: "3D de producto · Blender", enlace: "virtual_tut/p/CwdctLGJpUp/" },
-  { img: "g08", titulo: "Pokkie", detalle: "Fotografía · Sirui 33 mm f/1.2", enlace: "virtual_tut/p/DL73Bi0ReTq/" },
+  { img: "g08", titulo: "Pokkie", detalle: "Fotografía", enlace: "virtual_tut/p/DL73Bi0ReTq/" },
   { img: "g12", titulo: "Carro toon", detalle: "Animación · Blender y Grease Pencil", enlace: "virtual_tut/reel/C7R9pmsJ5kW/" },
 ];
 const SHOWREEL = "kAD_KtENM9o";
