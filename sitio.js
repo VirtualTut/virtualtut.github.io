@@ -44,7 +44,9 @@ const AL_ENTRAR = 12;
 
 // Datos de contacto: añade aquí los que quieras mostrar. Vacío = no se muestra nada.
 // Ejemplo: { texto: "Instagram", enlace: "https://instagram.com/..." }
-const CONTACTO = [];
+const CONTACTO = [
+  { texto: "Escríbeme por WhatsApp", enlace: "https://wa.me/573223305069?text=Hola%20Edward%2C%20vi%20tu%20portfolio%20y%20quiero%20hablar%20de%20un%20proyecto." },
+];
 
 const embed = (id) => `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
 
@@ -118,8 +120,10 @@ reel.addEventListener("click", () => {
 const contacto = document.getElementById("contacto");
 CONTACTO.forEach((c) => {
   const a = document.createElement("a");
-  a.className = "btn";
+  a.className = "btn lleno";
   a.href = c.enlace;
+  a.target = "_blank";
+  a.rel = "noopener";
   a.textContent = c.texto;
   contacto.append(a);
 });
