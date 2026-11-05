@@ -28,6 +28,16 @@ const TRABAJOS = [
   { id: "12", tipo: "Deporte", titulo: "Cruzados de pádel", detalle: "Textos sobre video", cats: ["dep"] },
   { id: "13", tipo: "Deporte", titulo: "Zonas de la pista", detalle: "Gráficos en 3D", cats: ["dep"] },
 ];
+const GALERIA = [
+  { img: "g02", titulo: "Tarántula", detalle: "3D · Blender", enlace: "virtual_tut/p/CtmVUJGrNGp/" },
+  { img: "g10", titulo: "Dron", detalle: "VFX · Blender y After Effects", enlace: "virtual_tut/reel/CKpwW-QpH4e/" },
+  { img: "g07", titulo: "Araña", detalle: "Fotografía · Sony ZV-E10", enlace: "virtual_tut/p/DJqMIeVsfja/" },
+  { img: "g04", titulo: "Helado", detalle: "3D de producto · Blender Cycles", enlace: "virtual_tut/p/DA91B1FubeR/" },
+  { img: "g11", titulo: "K-pop", detalle: "Fotografía de evento", enlace: "virtual_tut/p/DISI53GS1Dc/" },
+  { img: "g03", titulo: "Perfume", detalle: "3D de producto · Blender", enlace: "virtual_tut/p/CwdctLGJpUp/" },
+  { img: "g08", titulo: "Pokkie", detalle: "Fotografía · Sirui 33 mm f/1.2", enlace: "virtual_tut/p/DL73Bi0ReTq/" },
+  { img: "g12", titulo: "Carro toon", detalle: "Animación · Blender y Grease Pencil", enlace: "virtual_tut/reel/C7R9pmsJ5kW/" },
+];
 const SHOWREEL = "kAD_KtENM9o";
 const FILTROS = [["todos", "Todos"], ["th", "Talking head"], ["ads", "Anuncios"], ["anim", "Animación"], ["dep", "Deporte"]];
 const AL_ENTRAR = 12;
@@ -51,6 +61,17 @@ const fichas = TRABAJOS.map((t, i) => {
   b.addEventListener("click", () => abrir(i));
   grilla.append(b);
   return b;
+});
+
+const galeria = document.getElementById("galeria");
+GALERIA.forEach((g) => {
+  const a = document.createElement("a");
+  a.className = "pieza aparece";
+  a.href = `https://www.instagram.com/${g.enlace}`;
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.innerHTML = `<img src="media/${g.img}.jpg" alt="${g.titulo}" loading="lazy"><div><h3>${g.titulo}</h3><span>${g.detalle}</span></div>`;
+  galeria.append(a);
 });
 
 // Filtros y "Ver todos"
