@@ -101,11 +101,12 @@ figcaption {
 figcaption span { background: rgba(0, 0, 0, .6); padding: 3px 7px; }
 
 /* Datos clave */
-.datos { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--linea); }
-.datos > div { padding: clamp(24px, 3vw, 40px) var(--lado); border-left: 1px solid var(--linea); }
-.datos > div:first-child { border-left: 0; }
-.datos strong { display: block; font-size: clamp(26px, 3vw, 46px); font-weight: 200; line-height: 1.1; letter-spacing: -.02em; }
-.datos span { display: block; margin-top: 8px; color: var(--gris); font-size: 14px; line-height: 1.4; }
+.datos {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 32px;
+  padding: 18px var(--lado); border-top: 1px solid var(--linea);
+  font-family: var(--mono); font-stretch: 100%; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--gris);
+}
 
 /* Bloques */
 .bloque { padding: clamp(64px, 9vw, 128px) var(--lado); border-top: 1px solid var(--linea); }
@@ -219,10 +220,7 @@ dialog::backdrop { background: #000; }
   .barra nav { display: none; }
   .hero { grid-template-columns: 1fr; padding-top: 88px; }
   .hero-vid { justify-self: start; width: min(62vw, 300px); }
-  .datos { grid-template-columns: repeat(2, 1fr); }
-  .datos > div { padding: 20px 16px; }
-  .datos > div:nth-child(odd) { border-left: 0; }
-  .datos > div:nth-child(n + 3) { border-top: 1px solid var(--linea); }
+  .datos { flex-direction: column; padding: 16px; }
   .ideas li { grid-template-columns: 1fr; }
   .galeria { grid-template-columns: repeat(2, 1fr); }
   .cv-exp article { grid-template-columns: 1fr; gap: 4px; }
